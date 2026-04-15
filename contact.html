@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Cardio ML</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-bg"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+
+    <div class="dashboard-wrapper">
+        <nav class="sidebar">
+            <div class="brand">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li title="Analysis Desk" onclick="window.location.href='/'"><i class="fa-solid fa-chart-pie"></i></li>
+                <li title="Power BI Dashboard" onclick="window.location.href='/powerbi'"><i class="fa-solid fa-chart-line"></i></li>
+                <li class="active" title="Contact Us" onclick="window.location.href='/contact'"><i class="fa-solid fa-envelope"></i></li>
+            </ul>
+        </nav>
+
+        <main class="dashboard-core">
+            <header class="top-nav">
+                <div>
+                    <h1 class="gradient-text">Contact the Team</h1>
+                    <p class="subtitle">Have a question? Drop us a message.</p>
+                </div>
+            </header>
+
+            <div class="layout-grid">
+                <div class="entry-column" style="margin: 0 auto; min-width: 100%; max-width: 600px;">
+                    <div class="bento-card">
+                        <div class="card-header">
+                            <i class="fa-solid fa-paper-plane text-cyan"></i>
+                            <h3>Message Us</h3>
+                        </div>
+                        <form action="https://formsubmit.co/your_gmail_id_here@gmail.com" method="POST" class="input-grid-2" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <div class="modern-input">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            </div>
+                            <div class="modern-input">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required placeholder="name@example.com">
+                            </div>
+                            <div class="modern-input" style="flex: 1 1 100%;">
+                                <label for="question">Your Question</label>
+                                <textarea id="question" name="question" required placeholder="How can we help you?" style="width: 100%; padding: 1rem; border-radius: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--text-main); font-family: 'Outfit', sans-serif; resize: vertical; min-height: 120px; font-size: 1rem; outline: none; transition: border-color 0.3s ease; box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);"></textarea>
+                            </div>
+                            <!-- FormSubmit Configurations -->
+                            <input type="hidden" name="_subject" value="New Submission from Cardio ML Dashboard!">
+                            <input type="hidden" name="_captcha" value="false">
+                            
+                            <p class="form-hint-info" style="margin-top: 0;">
+                                <i class="fa-solid fa-circle-info"></i> Your message will be securely routed. Open <code style="color:var(--accent-pink);">contact.html</code> to replace the dummy email with your real Gmail ID! 
+                            </p>
+                            
+                            <button type="submit" class="cyber-button" style="width: 100%; justify-content: center; margin-top: 1rem; font-size: 1.1rem; padding: 1rem;">
+                                Send Message <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

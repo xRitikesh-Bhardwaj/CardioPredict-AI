@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Guide</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="guide.css">
+</head>
+
+<body>
+
+<div class="grid-bg"></div>
+<div class="glow-orb orb-1"></div>
+<div class="glow-orb orb-2"></div>
+<div class="glow-orb orb-3"></div>
+
+<div class="guide-container">
+
+    <a href="/" class="back-btn">
+        <i class="fa-solid fa-arrow-left"></i> Back to Dashboard
+    </a>
+
+    <div class="header-section">
+        <h1 class="gradient-text">Medical Guide (Easy Hinglish)</h1>
+        <p class="subtitle">Yeh guide aapko har input samajhne mein help karegi</p>
+    </div>
+
+    <!-- 1. Basic Health -->
+    <div class="definition-card">
+        <h3><i class="fa-solid fa-heart-pulse"></i> Basic Health (BP, Cholesterol, Sugar)</h3>
+        <p class="def-desc">Yeh aapke heart aur blood ki basic condition batata hai.</p>
+        <ul>
+            <li><strong>Blood Pressure (trestbps):</strong> Normal ~120 hota hai. 130+ ho to high BP ho sakta hai.</li>
+
+            <li><strong>Cholesterol (chol):</strong> 200 se kam normal hai. 240+ dangerous ho sakta hai.</li>
+
+            <li><strong>High Blood Sugar (fbs):</strong>
+                <br>✔ 1 = Sugar high hai (diabetes risk)
+                <br>❌ 0 = Normal
+            </li>
+        </ul>
+    </div>
+
+    <!-- 2. Chest Pain -->
+    <div class="definition-card" style="border-left-color: var(--accent-purple);">
+        <h3 style="color: var(--accent-purple);"><i class="fa-solid fa-lungs"></i> Chest Pain Type</h3>
+        <p class="def-desc">Yeh batata hai chest pain kis type ka hai. Har pain heart problem nahi hota.</p>
+        <ul>
+            <li><strong>Typical Angina (0):</strong> Exercise ya kaam karte waqt pain hota hai, rest lene se thik ho jata hai.</li>
+
+            <li><strong>Atypical Angina (1):</strong> Pain hota hai lekin clear pattern nahi hota.</li>
+
+            <li><strong>Non-anginal Pain (2):</strong> Gas, acidity ya muscle pain (heart se related nahi).</li>
+
+            <li><strong>Asymptomatic (3):</strong> Pain nahi hai, lekin heart risk ho sakta hai.</li>
+        </ul>
+    </div>
+
+    <!-- 3. ECG -->
+    <div class="definition-card" style="border-left-color: var(--accent-pink);">
+        <h3 style="color: var(--accent-pink);"><i class="fa-solid fa-file-waveform"></i> ECG Result</h3>
+        <p class="def-desc">Yeh heart ka electrical test hai.</p>
+        <ul>
+            <li><strong>0 = Normal:</strong> Sab sahi hai.</li>
+            <li><strong>1 = Minor Issue:</strong> Thodi abnormality hai.</li>
+            <li><strong>2 = Serious Issue:</strong> Heart problem ho sakti hai.</li>
+        </ul>
+    </div>
+
+    <!-- 4. Exercise -->
+    <div class="definition-card">
+        <h3><i class="fa-solid fa-person-running"></i> Exercise Data</h3>
+        <p class="def-desc">Exercise ke time heart ka behaviour check hota hai.</p>
+        <ul>
+            <li><strong>Maximum Heart Rate (thalach):</strong> Exercise ke time heart kitna fast beat karta hai.</li>
+
+            <li><strong>Exercise Pain (exang):</strong>
+                <br>✔ 1 = Exercise ke time pain hota hai
+                <br>❌ 0 = Pain nahi hota
+            </li>
+
+            <li><strong>Heart Stress Level (oldpeak):</strong> Exercise ke baad heart pe stress.</li>
+
+            <li><strong>Heart Response (slope):</strong>
+                <br>✔ 0 = Normal
+                <br>❌ 1 = No change
+                <br>⚠ 2 = Decreasing (problem ho sakti hai)
+            </li>
+        </ul>
+    </div>
+
+    <!-- 5. Advanced -->
+    <div class="definition-card" style="border-left-color: var(--accent-purple);">
+        <h3 style="color: var(--accent-purple);"><i class="fa-solid fa-vials"></i> Advanced Tests</h3>
+        <p class="def-desc">Yeh detailed tests hote hain jo heart blockage aur blood issues batate hain.</p>
+        <ul>
+            <li><strong>Blocked Vessels (ca):</strong>
+                <br>0 = No blockage
+                <br>1 = Mild
+                <br>2 = Moderate
+                <br>3 = Severe (dangerous)
+            </li>
+
+            <li><strong>Thalassemia (thal):</strong>
+                <br>✔ 1 = Normal
+                <br>❌ 2 = Fixed defect
+                <br>⚠ 3 = Reversible defect
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-top">
+        <h4>About Cardio ML</h4>
+        <div class="header-underline"></div>
+        <p>Cardio ML ek smart AI tool hai jo heart disease ka risk predict karta hai.</p>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h4>Features</h4>
+            <ul>
+                <li><a href="/">Risk Assessment</a></li>
+                <li><a href="/">Prediction</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="/guide">Guide</a></li>
+                <li><a href="/powerbi">Dashboard</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+                <li><a href="/contact">Support</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

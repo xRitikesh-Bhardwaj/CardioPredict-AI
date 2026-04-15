@@ -1,0 +1,106 @@
+.guide-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    position: relative;
+    z-index: 5;
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.definition-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+    border-left: 4px solid var(--accent-cyan);
+}
+
+.definition-card:hover {
+    border-color: rgba(0, 245, 212, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.definition-card h3 {
+    color: var(--accent-cyan);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.def-desc {
+    color: var(--text-main);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.definition-card ul {
+    background: rgba(0,0,0,0.3);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    margin-top: 1rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.definition-card li {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.definition-card li strong {
+    color: white;
+    display: inline-block;
+    min-width: 200px;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text-main);
+    background: rgba(255,255,255,0.05);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    border: 1px solid var(--border-subtle);
+    transition: var(--transition);
+    margin-bottom: 2rem;
+}
+
+.back-btn:hover {
+    background: rgba(0, 245, 212, 0.1);
+    border-color: var(--accent-cyan);
+    color: var(--accent-cyan);
+}
+
+/* Responsive Guide Mobile View */
+@media (max-width: 768px) {
+    .guide-container {
+        margin: 20px 10px;
+        padding: 0 10px;
+    }
+    
+    .definition-card li strong {
+        display: block;
+        margin-bottom: 4px;
+    }
+    
+    .definition-card {
+        padding: 1.5rem;
+    }
+}

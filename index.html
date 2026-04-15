@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardio ML Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-bg"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+
+    <div class="dashboard-wrapper">
+        <nav class="sidebar">
+            <div class="brand">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li class="active" title="Analysis Desk" onclick="window.location.href='/'"><i class="fa-solid fa-chart-pie"></i></li>
+                <li title="Power BI Dashboard" onclick="window.location.href='/powerbi'"><i class="fa-solid fa-chart-line"></i></li>
+                <li title="Contact Us" onclick="window.location.href='/contact'"><i class="fa-solid fa-envelope"></i></li>
+            </ul>
+        </nav>
+
+        <main class="dashboard-core">
+            <header class="top-nav">
+                <div>
+                    <h1 class="gradient-text">Neural Cardiology Assessment</h1>
+                    <p class="subtitle">v1.2 // Deep Learning Diagnostic Engine</p>
+                </div>
+                <div class="nav-group-right">
+                    <a href="/guide" class="guide-btn-nav">
+                        <i class="fa-solid fa-book-medical"></i> Explain these fields
+                    </a>
+                    <div class="system-status">
+                        <div class="pulse-ring"></div>
+                        <span>Model Online</span>
+                    </div>
+                </div>
+            </header>
+
+            <form id="prediction-form" class="layout-grid">
+                
+                <div class="entry-column">
+                    <div class="bento-card">
+                        <div class="card-header">
+                            <i class="fa-solid fa-clipboard-user text-cyan"></i>
+                            <h3>Patient Details</h3>
+                        </div>
+                        <div class="input-grid-2">
+                            <div class="modern-input">
+                                <label for="age">Age</label>
+                                <input type="number" id="age" name="age" min="1" max="120" placeholder="Enter age">
+                            </div>
+                            <div class="modern-input">
+                                <label for="sex">Gender</label>
+                                <select id="sex" name="sex">
+                                    <option value="" selected>Unknown / Unsure</option>
+                                    <option value="1">Male</option>
+                                    <option value="0">Female</option>
+                                </select>
+                            </div>
+                            <div class="modern-input">
+                                <label for="trestbps">Blood Pressure (trestbps)</label>
+                                <input type="number" id="trestbps" name="trestbps" min="50" max="250" placeholder="Normal around 120">
+                            </div>
+                            <div class="modern-input">
+                                <label for="chol">Cholesterol Level (Chol)</label>
+                                <input type="number" id="chol" name="chol" min="100" max="600" placeholder="Normal below 200">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bento-card">
+                        <div class="card-header">
+                            <i class="fa-solid fa-stethoscope text-purple"></i>
+                            <h3>Health Condition</h3>
+                        </div>
+                        <div class="input-grid-2">
+                            <div class="modern-input full-span">
+                                <label for="cp">Chest Pain Type (CP)</label>
+                                <select id="cp" name="cp">
+                                    <option value="" selected>Unknown / Unsure</option>
+                                    <option value="0">0.Typical Angina (heart pain during activity)</option>
+                                    <option value="1">1.Atypical Angina</option>
+                                    <option value="2">2.Non-anginal pain</option>
+                                    <option value="3">3.Asymptomatic (no pain but risk)</option>
+                                </select>
+                            </div>
+                            <div class="modern-input">
+                                <label for="fbs">High Blood Sugar (Fps)</label>
+                                <select id="fbs" name="fbs">
+                                    <option value="" selected>Unknown / Unsure</option>
+                                    <option value="1">1.Yes</option>
+                                    <option value="0">0.No</option>
+                                </select>
+                            </div>
+                            <div class="modern-input">
+                                <label for="restecg">ECG Result (restecg)</label>
+                                <select id="restecg" name="restecg">
+                                    <option value="" selected>Unknown / Unsure</option>
+                                    <option value="0">0.Normal</option>
+                                    <option value="1">1.Minor issue</option>
+                                    <option value="2">2.Serious issue</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bento-card">
+                        <div class="card-header">
+                            <i class="fa-solid fa-person-running text-pink"></i>
+                            <h3>Exercise Data</h3>
+                        </div>
+                        <div class="input-grid-2">
+                            <div class="modern-input">
+                                <label for="thalach">Maximum Heart Rate (thalach)</label>
+                                <input type="number" id="thalach" name="thalach" min="60" max="220" placeholder="Example: 150">
+                            </div>
+                            <div class="modern-input">
+                                <label for="exang">Chest Pain During Exercise (exang)</label>
+                                <select id="exang" name="exang">
+                                    <option value="" selected>Unknown / Unsure</option>
+                                    <option value="1">1.Yes</option>
+                                    <option value="0">0.No</option>
+                                </select>
+                            </div>
+                            <div class="modern-input">
+                                <label for="oldpeak">Heart Stress Level (oldpeak)</label>
+                                <input type="number" id="oldpeak" name="oldpeak" step="0.1" min="0" max="10" placeholder="Leave blank if unsure">
+                            </div>
+                            <div class="modern-input">
+                                <label for="slope">Heart Response After Exercise (slope)</label>
+                                <select id="slope" name="slope">
+                                    <option value="" selected>Unknown / Unsure</option>
+                                    <option value="0">0.Normal increase</option>
+                                    <option value="1">1.No change</option>
+                                    <option value="2">2.Decreasing</option>
+                                </select>
+                            </div>
+                            <div class="modern-input">
+                                <label for="ca">Blocked Blood Vessels (ca)</label>
+                                <select id="ca" name="ca">
+                                    <option value="" selected>Unknown / Unsure</option>
+                                    <option value="0">0 (No blockage)</option>
+                                    <option value="1">1 (Mild)</option>
+                                    <option value="2">2 (Moderate)</option>
+                                    <option value="3">3 (Severe)</option>
+                                </select>
+                            </div>
+                            <div class="modern-input">
+                                <label for="thal">Blood Disorder (Thalassemia)</label>
+                                <select id="thal" name="thal">
+                                    <option value="" selected>Unknown / Unsure</option>
+                                    <option value="1">1.Normal</option>
+                                    <option value="2">2.Fixed defect</option>
+                                    <option value="3">3.Reversible defect</option> 
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="form-hint-info">
+                        <i class="fa-solid fa-circle-info"></i> Don't know some values? Leave default or select "I don't know" / "Unknown"
+                    </p>
+                </div>
+
+                <div class="analysis-column">
+                    <div class="bento-card analysis-panel">
+                        <div class="ai-header">
+                            <i class="fa-solid fa-microchip"></i>
+                            <h2>Model Interface</h2>
+                        </div>
+                        
+                        <div id="cta-container">
+                            <div class="brain-graphic">
+                                <div class="node n1"></div>
+                                <div class="node n2"></div>
+                                <div class="node n3"></div>
+                                <svg viewBox="0 0 100 100" class="connections">
+                                    <path d="M50 20 L20 60 L80 60 Z" />
+                                </svg>
+                            </div>
+                            <p class="instruction">Input the 13 clinical parameters to initiate neural network classification.</p>
+                            <button type="submit" class="cyber-button" id="submit-btn">
+                                RUN AI DIAGNOSTIC <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <div id="results-panel" class="hidden">
+                            <div class="spinner-container" id="loading-spinner">
+                                <div class="rad-spinner">
+                                    <div class="circle c1"></div>
+                                    <div class="circle c2"></div>
+                                    <div class="circle c3"></div>
+                                </div>
+                                <span>Evaluating network activations...</span>
+                            </div>
+
+                            <div id="result-content" class="hidden result-display">
+                                <div class="verdict-banner" id="verdict-banner">
+                                </div>
+                                
+                                <div class="stats-row">
+                                    <div class="stat-box">
+                                        <h4>Risk Probability</h4>
+                                        <div class="radial-progress" id="probability-radial" style="--val: 0">
+                                            <span id="probability-text">0%</span>
+                                        </div>
+                                    </div>
+                                    <div class="stat-box">
+                                        <h4>Algorithm</h4>
+                                        <span class="algo-name">Logistic Reg / ML</span>
+                                    </div>
+                                </div>
+
+                                <div class="insight-box">
+                                    <i class="fa-solid fa-bolt"></i>
+                                    <p id="insight-text">Awaiting result insights...</p>
+                                </div>
+
+                                <button type="button" class="mt-15 outline-button" id="reset-btn">
+                                    <i class="fa-solid fa-rotate-right"></i> Analyze New Patient
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <footer class="site-footer">
+                <div class="footer-top">
+                    <h4>About Cardio ML</h4>
+                    <div class="header-underline"></div>
+                    <p>Cardio ML is the ultimate intelligent diagnostic tool for heart disease prediction. We harness the power of advanced Machine Learning algorithms to provide accurate cardiovascular risk assessments. Whether you're a healthcare professional or an individual, our suite of modern AI predictive tools delivers lightning-fast insights to secure a healthier tomorrow.</p>
+                </div>
+                <hr class="footer-divider">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4>Features</h4>
+                        <div class="header-underline"></div>
+                        <ul>
+                            <li><a href="/">Risk Assessment</a></li>
+                            <li><a href="/">Heart Disease Prediction</a></li>
+                            <li><a href="/">ML Dashboard</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Resources</h4>
+                        <div class="header-underline"></div>
+                        <ul>
+                            <li><a href="/guide">User Guide</a></li>
+                            <li><a href="/guide">How to Read Data</a></li>
+                            <li><a href="/guide">Medical Glossary</a></li>
+                            <li><a href="/powerbi">Feature Importances</a></li>
+                            <li><a href="/contact">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Integrations</h4>
+                        <div class="header-underline"></div>
+                        <ul>
+                            <li><a href="/powerbi">Power BI</a></li>
+                            <li><a href="/">API Access</a></li>
+                            <li><a href="/">REST Endpoints</a></li>
+                            <li><a href="/">Webhooks</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Corporate Info</h4>
+                        <div class="header-underline"></div>
+                        <ul>
+                            <li><a href="/contact">Contact Team</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Disclaimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

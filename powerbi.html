@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Dashboard - Cardio ML</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="grid-bg"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+
+    <div class="dashboard-wrapper">
+
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="brand">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+            </div>
+
+            <ul class="nav-links">
+                <li title="Analysis Desk" onclick="window.location.href='/'">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </li>
+                <li class="active" title="Power BI Dashboard" onclick="window.location.href='/powerbi'">
+                    <i class="fa-solid fa-chart-line"></i>
+                </li>
+                <li title="Contact Us" onclick="window.location.href='/contact'">
+                    <i class="fa-solid fa-envelope"></i>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="dashboard-core">
+
+            <!-- Header -->
+            <header class="top-nav">
+                <div>
+                    <h1 class="gradient-text">India Heart Disease Overview</h1>
+                    <p class="subtitle">Power BI Statistical Dashboard Interface</p>
+                </div>
+            </header>
+
+            <!-- Dashboard Section -->
+            <div class="bento-card" style="text-align: center;">
+
+                <!-- Dashboard Image -->
+                <img src="Documents/Heart_Disease_Dashboard.png" alt="Power BI Dashboard"
+                    style="width: 100%; max-width: 900px; border-radius: 12px;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.2); margin-bottom: 2rem;">
+
+                <h2>Heart Disease Analysis Dashboard</h2>
+
+                <p style="color: var(--text-muted); margin: 1rem auto 2rem; max-width: 600px; line-height: 1.6;">
+                    This is a preview of the Power BI dashboard. To explore full interactive features,
+                    download the dashboard file and open it using Microsoft Power BI Desktop.
+                </p>
+
+                <!-- Download Button -->
+                <a href="/Heart_Disease_Analysis_Dashboard.pbix" download class="cyber-button" style="display: inline-flex; justify-content: center;">
+                    <i class="fa-solid fa-download"></i> Download Dashboard
+                </a>
+
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>
